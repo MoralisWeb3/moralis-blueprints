@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .nfts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .horizontal-card {
+    display: flex;
+    margin: 1rem;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    min-width: 700px;
+  }
+  
+  .horizontal-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .horizontal-card img {
+    width: 350px;
+    height: 350px;
+    margin-right: 1rem;
+    object-fit: contain;
+    padding: 1rem;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .info h2 {
+    margin: 0 0 0.5rem;
+  }
+  

@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  .logos{
+    display: flex;
+    justify-content: center;
+  }
+  .button {
+    padding: 0.5rem 1rem;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: #0051cb;
+  }
+  
+  .button:disabled {
+    background-color: #a6a6a6;
+    cursor: not-allowed;
+  }
+  
+  .connectedAccount {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .my_nfts_button {
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-family: 'Roboto', sans-serif;
+    color: blue;
+    border: none;
+    cursor: pointer;
+  }
+  .my_nfts_button:hover span {
+    border-bottom: 2px solid blue;
+  }
+  
