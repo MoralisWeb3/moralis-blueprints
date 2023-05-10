@@ -1,0 +1,349 @@
+.App {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.header {
+  height: 80px;
+  width: calc(100% - 200px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.logo{
+  width: 40px;
+  height: 40px;
+  padding-right: 20px;
+}
+
+.leftH {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.rightH {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.headerItem {
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.headerItem:hover {
+  background-color: #EB5254;
+  color: white;
+  cursor: pointer;
+}
+
+.connectButton {
+  background-color: #EB5254; 
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.connectButton:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.main {
+  height: 1000px;
+  width: 100%;
+}
+
+.firstRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+.slogan {
+  position: relative;
+  margin-top: 30px;
+}
+
+.line {
+  border-top: solid #EB5254 4px;
+  width: 90px;
+  position: absolute;
+  top: 36px;
+  left: 0px;
+}
+
+.sloganText {
+  margin-left: 250px;
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.creatorFrame {
+  height: 380px;
+  width: 400px;
+  background-color: transparent;
+  border-top: solid #EB5254 3px;
+  border-right: solid #EB5254 3px;
+  border-left: solid #EB5254 3px;
+  margin-right: 250px;
+  position: relative;
+}
+
+.creatorImg {
+  position: absolute;
+  bottom: 0px;
+  left: -20px;
+  width: 420px;
+}
+
+.imgshout{
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  font-size: 8px;
+  color: gray;
+}
+
+.creatorName {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #EB5254;
+  font-weight: 700;
+}
+
+.secondRow {
+  background-color: #F5F5F5;
+  height: 200px;
+  margin-left: 180px;
+  width: calc(100vw - 360px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  position: relative;
+}
+
+
+.infoPara {
+  margin-left: 5%;
+  width: 45%;
+  font-size: 20px;
+}
+
+.infoButton {
+  margin-right: 5%;
+  width: 18%;
+  height: 40px;
+  color: white;
+  text-transform: uppercase;
+  border: 0px;
+  font-weight: 700;
+}
+
+.infoButton:hover {
+  cursor: pointer;
+}
+
+.thirdRow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 998;
+}
+
+.bottomStyling {
+  background-color: #EB5254;
+  width: 100%;
+  position: absolute;
+  top: -40px;
+  height: 100%;
+  z-index: 998;
+
+}
+
+
+.bannerImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center 60%;
+}
+
+.patronContent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 400px;
+}
+
+.creatorInfo {
+  width: 25%;
+  height: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+  flex-direction: column;
+  gap: 20px;
+  border-right: 1px solid #dcdcdc;
+}
+
+.feed {
+  width: 50%;
+  height: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+  flex-direction: column;
+  gap: 20px;
+  border-right: 1px solid #dcdcdc;
+  overflow-y: scroll;
+}
+
+.subInfo{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+  flex-direction: column;
+  gap: 20px;
+  width: 25%;
+  height: 500px;
+}
+
+.imgshoutout{
+  color: gray;
+  position: absolute;
+  right:0px;
+  top: 250px;
+  font-size: 8px;
+}
+
+.creatorProfileImg {
+  background-color: #eb525535;
+  border: 2px solid black;
+  border-radius: 1000px;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.creatorProfileName {
+  color: #EB5254;
+  font-weight: 700;
+}
+
+.creatorProfileOccupation{
+  color: black;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.socials {
+  width: 20%;
+}
+
+.numOfPatrons {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.numOfPatronsTitle {
+  padding: 10px 25px;
+  background-color: #F5F5F5;
+  border-radius: 6px;
+}
+
+
+.feedTitle {
+  padding: 10px 20px;
+  border-radius: 100px;
+  color: gray;
+  background-color: #F5F5F5;
+}
+
+.timeLeft {
+ width: 80%;
+ background-color: black;
+ border-radius: 100px;
+ height: 40px;
+ font-weight: 600;
+ color: white;
+ font-size: 18px;
+ text-align: center;
+ line-height: 40px;
+}
+
+
+.yourMembership {
+  min-height: 400px;
+  width: 80%;
+}
+
+.cardTitle {
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.extend {
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  background-color: #F5F5F5;
+  border-radius: 100px;
+  color: black;
+  line-height: 35px;
+  font-weight: 600;
+  margin-top: 15px;
+  transition: background-color 0.4s ease;
+}
+
+.extend:hover {
+  cursor: pointer;
+  background-color: #e9e8e8;
+}
+
+.opensea {
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+  transition: color 0.4s ease;
+}
+
+.opensea:hover {
+  cursor: pointer;
+  color: #EB5254;
+}
+
+.feedItems {
+  display:flex; 
+  justify-content:flex-start; 
+  align-items:flex-start; 
+  flex-direction:column; 
+  width: 90%
+}
