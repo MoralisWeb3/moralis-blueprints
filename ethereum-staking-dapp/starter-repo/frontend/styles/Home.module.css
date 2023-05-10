@@ -1,0 +1,289 @@
+.main {
+  font-family: lft-etica-mono, ui-monospace, SFMono-Regular, "SF Mono", Menlo,
+    Consolas, "Liberation Mono", monospace;
+  min-height: 100vh;
+  background-color: #ffffff;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(72, 160, 248, 1) 100%
+  );
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 3.5rem;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),
+    rgb(255, 255, 255)
+  );
+  color: rgb(17, 42, 87);
+  padding: 0 5rem;
+}
+
+.header_logoSection {
+  display: flex;
+  align-items: center;
+}
+
+.header_btn {
+  width: 10rem;
+  height: 2.5rem;
+}
+
+.title {
+  font-size: 1.3rem;
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+
+.beans {
+  margin-left: 0.5rem;
+}
+
+.connectBtn {
+  width: 100%;
+  height: 100%;
+  background-color: #48a0f8;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.stakeBtn {
+  position: absolute;
+  bottom: 20px;
+  width: 70%;
+  height: 3rem;
+  background-color: #48a0f8;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  color: #000000;
+}
+
+.stakingContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 52rem;
+  height: 33rem;
+  margin-top: 5rem;
+}
+
+.stakingContainer > section {
+  width: 24rem;
+}
+
+.stakeUnstakeTab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 3rem;
+  margin: auto;
+  border-radius: 2rem;
+  background-color: #eae6ef;
+}
+
+.stakeUnstakeTab > section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+/* .stakeUnstakeTab > section:hover,
+.stakeUnstakeTab > section.active {
+  background-color: rgba(238, 174, 202, 0.179);
+  color: #fff;
+} */
+
+.stakingType {
+  background-color: rgb(238, 174, 202);
+  transition: all 150ms ease-in-out;
+}
+
+.stakingSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 81%;
+  /* background-color: #ffffff2d; */
+  /* padding: 1rem; */
+  margin-top: 1rem;
+  border-radius: 2rem;
+  /* box-shadow: 0 0 20px #a2a2a25c; */
+  box-shadow: rgba(36, 40, 71, 0.15) 0px 10px 22px,
+    rgba(36, 40, 71, 0.2) 0px 21px 25px;
+  background: linear-gradient(
+      90deg,
+      rgba(243, 243, 243, 0.15) 0%,
+      rgba(243, 243, 243, 0.25) 9.89%,
+      rgba(243, 243, 243, 0.25) 56.97%,
+      rgba(243, 243, 243, 0.15) 101.76%
+    ),
+    rgba(0, 19, 255, 0.03);
+  background-blend-mode: overlay, normal;
+}
+
+.stakingInfoSection {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  align-items: center;
+  height: 93%;
+  /* background-color: #ffffff2d; */
+  /* padding: 1rem; */
+  border-radius: 2rem;
+  /* box-shadow: 0 0 20px #a2a2a25c; */
+  box-shadow: rgba(36, 40, 71, 0.15) 0px 10px 22px,
+    rgba(36, 40, 71, 0.2) 0px 21px 25px;
+  background-color: #ffffff;
+  /* background: linear-gradient(
+      90deg,
+      rgba(243, 243, 243, 0.15) 0%,
+      rgba(243, 243, 243, 0.25) 9.89%,
+      rgba(243, 243, 243, 0.25) 56.97%,
+      rgba(243, 243, 243, 0.15) 101.76%
+    ),
+    rgba(0, 19, 255, 0.03); */
+  /* background-blend-mode: overlay, normal; */
+  position: relative;
+}
+
+.apy {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: auto;
+  color: transparent;
+  background: linear-gradient(
+    225deg,
+    rgb(72, 160, 248) 0%,
+    rgb(72, 160, 248) 13.8%,
+    rgb(230, 73, 255) 88.28%
+  );
+  -webkit-background-clip: text;
+}
+
+.lockedStakingAPY {
+  font-size: 0.8rem;
+  font-weight: 600;
+  /* margin: auto; */
+  margin-top: 0.3rem;
+  margin-bottom: -0.5rem;
+  color: transparent;
+  background: linear-gradient(
+    225deg,
+    rgb(72, 160, 248) 10%,
+    rgb(72, 160, 248) 63.8%,
+    rgb(230, 73, 255) 99.98%
+  );
+  -webkit-background-clip: text;
+}
+
+.stakingBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 92%;
+  border-radius: 2rem;
+  background-color: #ffffff;
+  box-shadow: rgba(36, 40, 71, 0.15) 0px 10px 22px,
+    rgba(36, 40, 71, 0.1) 0px 21px 25px;
+  position: relative;
+}
+
+.stakingBox > h2 {
+  margin-top: 1rem;
+}
+
+.inputField {
+  width: 70%;
+  height: 2.3rem;
+  color: #3e2d67;
+  background-color: #eae6ef;
+  font-size: 1rem;
+  margin: 1rem 0;
+  padding-left: 0.5rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+}
+
+.inputField::placeholder {
+  font-size: 1rem;
+  color: #443e38;
+}
+
+.inputField::-webkit-inner-spin-button,
+.inputField::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.stakingInfo {
+  width: 70%;
+}
+
+.stakingInfo > h2 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.stakingInfo > p {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgb(238, 174, 202);
+}
+
+.lockedStaking {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0 0;
+  border-bottom: 1px solid rgb(238, 174, 202);
+}
+
+.stakingDataContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 52rem;
+  margin-top: 5rem;
+}
+
+.stakingData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 8rem;
+  border-radius: 1rem;
+  color: #443e38;
+  background-color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  /* padding: 2rem 1rem; */
+  box-shadow: rgba(36, 40, 71, 0.1) 0px 1px 22px,
+    rgba(36, 40, 71, 0.1) 0px 1px 15px;
+}
+.stakingData_value {
+  color: #3e2d67;
+  margin-top: 1rem;
+}
