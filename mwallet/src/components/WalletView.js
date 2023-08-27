@@ -13,6 +13,8 @@ import { LogoutOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import logo from "../noImg.png";
 import axios from "axios";
+import { CHAINS_CONFIG } from "../chains";
+import { ethers } from "ethers";
 
 // const tokens = [
 //   {
@@ -61,6 +63,10 @@ function WalletView({
   const [nfts, setNfts] = useState(null);
   const [balance, setBalance] = useState(0);
   const [fetching, setFetching] = useState(true);
+  const [amountToSend, setAmountToSend] = useState(null);
+  const [sendToAddress, setSendToAddress] = useState(null);
+  const [processing, setProcessing] = useState(false);
+  const [hash, setHash] = useState(null);
 
   const items = [
     {
@@ -133,9 +139,88 @@ function WalletView({
     {
       key: "1",
       label: `Transfer`,
-      children: <>Transfer</>,
+      children: (
+        <>
+          <h3>Native Balance</h3>
+          <h1>
+            {balance.toFixed(2)} {CHAINS_CONFIG[selectedChain].ticker}
+          </h1>
+          <div className="sendRow">
+            <p style={{ width: "90px", textAlign: "left" }}>To:</p>
+            <Input
+              value={sendToAddress}
+              onChange={(e) => setSendToAddress(e.target.value)}
+              placeholder="0x"
+            />
+          </div>
+          <div className="sendRow">
+            <p style={{ width: "90px", textAlign: "left" }}>Amount:</p>
+            <Input
+              value={amountToSend}
+              onChange={(e) => setAmountToSend(e.target.value)}
+              placeholder="Native tokens you wish to send"
+            />
+          </div>
+          <Button
+            style={{ width: "100%", marginTop: "20px", marginBottom: "20px" }}
+            type="primary"
+            onClick={() => sendTransaction(sendToAddress, amountToSend)}
+          >
+            Send Tokens
+          </Button>
+          {processing && (
+            <>
+              <Spin />
+              {hash && (
+                <Tooltip title={hash}>
+                  <p>Hover For Tx Hash</p>
+                </Tooltip>
+              )}
+            </>
+          )}
+        </>
+      ),
     },
   ];
+
+  async function sendTransaction(to, amount) {
+    const chain = CHAINS_CONFIG[selectedChain];
+
+    const provider = new ethers.JsonRpcProvider(chain.rpcUrl);
+
+    const privateKey = ethers.Wallet.fromPhrase(seedPhrase).privateKey;
+
+    const wallet = new ethers.Wallet(privateKey, provider);
+
+    const tx = {
+      to: to,
+      value: ethers.parseEther(amount.toString()),
+    };
+
+    setProcessing(true);
+
+    try {
+      const transaction = await wallet.sendTransaction(tx);
+      setHash(transaction.hash);
+      const receipt = await transaction.wait();
+
+      setHash(null);
+      setProcessing(false);
+      setAmountToSend(null);
+      setSendToAddress(null);
+
+      if (receipt.status === 1) {
+        getAccountTokens();
+      } else {
+        console.log("failed");
+      }
+    } catch (err) {
+      setHash(null);
+      setProcessing(false);
+      setAmountToSend(null);
+      setSendToAddress(null);
+    }
+  }
 
   async function getAccountTokens() {
     setFetching(true);
@@ -199,7 +284,11 @@ function WalletView({
           </div>
         </Tooltip>
         <Divider />
-        <Tabs defaultActiveKey="1" items={items} className="walletView" />
+        {fetching ? (
+          <Spin />
+        ) : (
+          <Tabs defaultActiveKey="1" items={items} className="walletView" />
+        )}
       </div>
     </>
   );

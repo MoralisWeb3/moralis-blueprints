@@ -6,8 +6,6 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  /* background-color: aqua; */
-  background-color: aqua;
 }
 
 .frontPageLogo {
@@ -37,11 +35,11 @@
 h2 {
   font-size: 40px;
   margin-bottom: 5px;
-  color: rgb(46, 46, 46);
+  color: rgba(54, 46, 46, 0.774);
 }
 
 .h4 {
-  color: rgb(46, 46, 46);
+  color: rgba(54, 46, 46, 0.774);
   padding-bottom: 50px;
 }
 

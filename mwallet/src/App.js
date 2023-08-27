@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import logo from "./moralisLogo.svg";
+import logo from "./ensLogo.png";
 import { Select } from "antd";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";

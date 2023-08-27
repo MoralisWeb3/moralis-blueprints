@@ -1,16 +1,16 @@
 import React from "react";
-import mwallet from "../mwallet.png";
 import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
+import header from "../header.png";
 
 function Home() {
   const navigate = useNavigate();
   return (
     <>
       <div className="content">
-        <img src={mwallet} alt="logo" className="frontPageLogo" />
-        <h2>Hey There !</h2>
-        <h4 className="h4">Welcome to your Web3 Wallet</h4>
+        <img src={header} alt="logo" />
+        <h2>Greetings!</h2>
+        <h4 className="h4">Step into your Web3 Wallet Experience</h4>
         <Button
           onClick={() => navigate("/yourwallet")}
           className="frontPageButton"

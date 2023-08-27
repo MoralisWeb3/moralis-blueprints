@@ -1,13 +1,11 @@
 {
-  "name": "M'Wallet",
+  "name": "ENS'Wallet",
   "version": "1.0.0",
-  "description": "Your First Crypto Wallet Extension",
+  "description": "Crypto Wallet Extension with ENS resolution and QR code capabilities",
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html",
     "default_title": "Open Wallet"
   },
-  "permissions": [
-    "storage"
-  ]
+  "permissions": ["storage"]
 }
